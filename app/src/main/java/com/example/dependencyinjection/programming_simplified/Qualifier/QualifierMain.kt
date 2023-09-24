@@ -10,7 +10,9 @@ import javax.inject.Inject
 import javax.inject.Qualifier
 
 class QualifierMain @Inject constructor(
+  @FName
   private val fName: String,
+  @Lname
      private val lName: String
 ) {
     fun getName() {

@@ -48,11 +48,27 @@ class  AppModule{
 
     @Provides
     @Singleton
-    fun getName():String = "Pankaj"
+    @FName
+    fun getFName():String = "Pankaj"
+
+     @Provides
+    @Singleton
+    @LName
+    fun getLName():String = "Pankaj"
 
     @Provides
     @Singleton
     fun binding(
+        @FName
         name:String
     ):One = ImplementOne(name)
+
+
+@Qualifier
+@Retention(AnnotationRetention.BINARY)
+annotation class FName
+
+@Qualifier
+@Retention(AnnotationRetention.BINARY)
+annotation class LName
 }*/

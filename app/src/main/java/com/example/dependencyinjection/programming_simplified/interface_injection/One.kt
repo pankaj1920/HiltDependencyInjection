@@ -1,3 +1,9 @@
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
+import javax.inject.Singleton
+
 //package com.example.dependencyinjection.programming_simplified.interface_injection
 //
 //import com.example.dependencyinjection.utils.Print
@@ -24,10 +30,29 @@
 //    }
 //}
 //
-//@Module
-//@InstallIn(SingletonComponent::class)
-//abstract class AppModule {
-//    @Binds
-//    @Singleton
-//    abstract fun binding(implementOne: ImplementOne): One()
-//}
+
+
+/*
+@Module
+@InstallIn(SingletonComponent::class)
+abstract class AppModule {
+    @Binds
+    @Singleton
+    abstract fun binding(implementOne: ImplementOne): One()
+}*/
+
+/*
+@Module
+@InstallIn(SingletonComponent::class)
+class  AppModule{
+
+    @Provides
+    @Singleton
+    fun getName():String = "Pankaj"
+
+    @Provides
+    @Singleton
+    fun binding(
+        name:String
+    ):One = ImplementOne(name)
+}*/

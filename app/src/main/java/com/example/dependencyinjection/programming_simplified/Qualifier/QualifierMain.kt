@@ -14,9 +14,12 @@ class QualifierMain @Inject constructor(
   private val fName: String,
   @Lname
      private val lName: String
+  @ActivityContext
+  private val context:Context
 ) {
     fun getName() {
         Print.log("My name is $fName $lName")
+        Toast.makeText(context,"Show message",Toast.Length_Short).show();
     }
 }
 
